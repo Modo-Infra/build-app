@@ -36,8 +36,7 @@ jobs:
           actor: ${{ github.event.client_payload.actor }}
           envelope_base64: ${{ github.event.client_payload.envelope_base64 }}
           signature: ${{ github.event.client_payload.signature }}
-          alg: ${{ github.event.client_payload.alg }}
-          
+          alg: ${{ github.event.client_payload.alg }}          
           gha_reader_id: ${{ vars.GHA_READER_ID }}
           gha_reader_key: ${{ secrets.GHA_READER_KEY }}
           dispatch_payload_secret: ${{ secrets.DISPATCH_PAYLOAD_SECRET }}
