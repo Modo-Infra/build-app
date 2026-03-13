@@ -38,3 +38,19 @@ jobs:
           envelope_base64: ${{ github.event.client_payload.envelope_base64 }}
           signature: ${{ github.event.client_payload.signature }}
           alg: ${{ github.event.client_payload.alg }}
+          
+          gha_reader_id: ${{ vars.GHA_READER_ID }}
+          gha_reader_key: ${{ secrets.GHA_READER_KEY }}
+          dispatch_payload_secret: ${{ secrets.DISPATCH_PAYLOAD_SECRET }}
+          azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          az_accountant_upn: ${{ secrets.AZ_ACCOUNTANT_UPN }}
+          gha_deployer_key: ${{ secrets.GHA_DEPLOYER_KEY }}
+          gha_dispatcher_key: ${{ secrets.GHA_DISPATCHER_KEY }}
+          gha_runner_app_key: ${{ secrets.GHA_RUNNER_APP_KEY }}
+          cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare_r2_access_key_id: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          cloudflare_r2_secret_access_key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          hub_age_identity_key: ${{ secrets.HUB_AGE_IDENTITY_KEY }}
+          sys_hub_age_recipient: ${{ vars.SYS_HUB_AGE_RECIPIENT }}
+          gha_packages_token: ${{ secrets.GHA_PACKAGES_TOKEN }}
+          vizaux_package_token: ${{ secrets.VIZAUX_PACKAGE_TOKEN }}
