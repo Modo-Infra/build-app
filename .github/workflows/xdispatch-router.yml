@@ -2,7 +2,7 @@ name: dispatch-router
 
 on:
   repository_dispatch:
-    types: [viza.dispatch]
+    types: [x.viza.dispatch]
 
 jobs:
   run:
