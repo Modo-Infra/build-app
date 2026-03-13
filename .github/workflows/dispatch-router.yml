@@ -1,0 +1,18 @@
+name: dispatch-router
+
+on:
+  repository_dispatch:
+    types: [viza.dispatch]
+
+jobs:
+  run:
+    name: Dispatch via SSOT (viza-dispatch-flow)
+    uses: Modo-Infra/viza-dispatch-flow/.github/workflows/dispatch-router.yml@main
+    with:
+      executionKey: ${{ github.event.client_payload.executionKey }}
+      runnerLabel: ${{ github.event.client_payload.runnerLabel }}
+      actor: ${{ github.event.client_payload.actor }}
+      envelope_base64: ${{ github.event.client_payload.envelope_base64 }}
+      signature: ${{ github.event.client_payload.signature }}
+      alg: ${{ github.event.client_payload.alg }}
+    secrets: inherit
