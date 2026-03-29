@@ -8,6 +8,10 @@ permissions:
   id-token: write
   contents: read
 
+concurrency:
+  group: ${{ github.event.client_payload.executionKey }}
+  cancel-in-progress: false
+
 jobs:
   run:
     name: Dispatch via SSOT (viza-dispatch-flow)
